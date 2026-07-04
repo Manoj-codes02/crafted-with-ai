@@ -1,6 +1,8 @@
 # FarmAssist AI – Smart Farming Assistant
 **Track**: AI for Agriculture
 
+![FarmAssist AI Dashboard Preview](assets/dashboard_preview.jpg)
+
 FarmAssist AI is a premium, high-fidelity agronomy dashboard and intelligent agricultural expert system. It addresses critical farming challenges by providing:
 1. **Precision Irrigation Schedules** based on soil sensors and weather forecasts.
 2. **Targeted Fertilizer Compounding (NPK)** recipes matching soil nutrient shortages against crop-specific profiles.
