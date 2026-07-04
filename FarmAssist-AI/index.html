@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FarmAssist AI – Smart Farming Assistant</title>
+  
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts: Outfit (modern tech) & Inter (high legibility) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Chart.js for High Fidelity Agriculture Data Visualizations -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- Background Ambient Glow Elements -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <div class="app-container">
+    <!-- TOP NAVIGATION BAR -->
+    <header class="app-header">
+      <div class="logo-area">
+        <div class="logo-icon-wrapper">
+          <i class="fa-solid fa-leaf logo-icon"></i>
+          <div class="logo-pulse"></div>
+        </div>
+        <div class="logo-text">
+          <h1>FarmAssist <span class="accent-text">AI</span></h1>
+          <span class="tagline">Smart Agriculture System</span>
+        </div>
+      </div>
+      
+      <div class="system-status-bar">
+        <div class="status-item">
+          <span class="status-dot online"></span>
+          <span class="status-label">Satellite link: Active</span>
+        </div>
+        <div class="status-item">
+          <i class="fa-solid fa-cloud-sun weather-quick-icon"></i>
+          <span class="status-label">28°C • Shower Risk 20%</span>
+        </div>
+        <div class="status-item">
+          <i class="fa-solid fa-wifi telemetry-icon"></i>
+          <span class="status-label">Sensors: 12/12 Online</span>
+        </div>
+        <div class="status-item time-display" id="live-clock">
+          10:48 PM
+        </div>
+      </div>
+    </header>
+
+    <div class="main-layout">
+      <!-- SIDE NAVIGATION BAR -->
+      <aside class="sidebar">
+        <nav class="nav-menu">
+          <button class="nav-btn active" data-tab="dashboard">
+            <i class="fa-solid fa-chart-line nav-icon"></i>
+            <span class="nav-text">Dashboard</span>
+          </button>
+          <button class="nav-btn" data-tab="disease-scanner">
+            <i class="fa-solid fa-eye-dropper nav-icon"></i>
+            <span class="nav-text">AI Disease Scanner</span>
+          </button>
+          <button class="nav-btn" data-tab="soil-optimizer">
+            <i class="fa-solid fa-flask nav-icon"></i>
+            <span class="nav-text">Soil & Water Optimizer</span>
+          </button>
+          <button class="nav-btn" data-tab="harvest-predictor">
+            <i class="fa-solid fa-calendar-check nav-icon"></i>
+            <span class="nav-text">Harvest Timeline</span>
+          </button>
+          <button class="nav-btn" data-tab="satellite-ndvi">
+            <i class="fa-solid fa-satellite nav-icon"></i>
+            <span class="nav-text">NDVI Satellite Map</span>
+          </button>
+        </nav>
+        
+        <div class="sidebar-footer">
+          <div class="farm-profile">
+            <div class="avatar-wrapper">
+              <i class="fa-solid fa-tractor avatar-icon"></i>
+            </div>
+            <div class="profile-info">
+              <div class="profile-name">GreenValley Farms</div>
+              <div class="profile-role">Zone 4B • Central India</div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- CONTENT VIEWPORT -->
+      <main class="content-viewport">
+        
+        <!-- ================= TAB: DASHBOARD ================= -->
+        <section id="tab-dashboard" class="tab-pane active">
+          <div class="dashboard-grid">
+            <!-- Hero Weather & Alerts Card -->
+            <div class="card weather-hero-card colspan-2">
+              <div class="card-header">
+                <h3><i class="fa-solid fa-cloud-sun-rain"></i> Environmental Conditions</h3>
+                <span class="card-action-text"><i class="fa-solid fa-arrows-rotate animate-spin"></i> Auto-updating</span>
+              </div>
+              <div class="weather-hero-content">
+                <div class="weather-primary">
+                  <div class="weather-temp">28<span class="temp-deg">°C</span></div>
+                  <div class="weather-desc">Scattered Showers Expected</div>
+                  <div class="weather-location"><i class="fa-solid fa-location-dot"></i> Lat: 23.0225° N, Lon: 72.5714° E</div>
+                </div>
+                <div class="weather-stats-grid">
+                  <div class="w-stat-box">
+                    <span class="w-stat-label">Soil Moisture</span>
+                    <span class="w-stat-val">34% <span class="stat-indicator warning"><i class="fa-solid fa-caret-down"></i> Low</span></span>
+                  </div>
+                  <div class="w-stat-box">
+                    <span class="w-stat-label">Humidity</span>
+                    <span class="w-stat-val">68%</span>
+                  </div>
+                  <div class="w-stat-box">
+                    <span class="w-stat-label">Rainfall (24h)</span>
+                    <span class="w-stat-val">2.4 mm</span>
+                  </div>
+                  <div class="w-stat-box">
+                    <span class="w-stat-label">Solar Radiation</span>
+                    <span class="w-stat-val">6.8 kWh/m²</span>
+                  </div>
+                </div>
+              </div>
+              <div class="weather-alert-banner warning">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <div class="alert-text">
+                  <strong>Irrigation Alert:</strong> Soil moisture in Field B (Tomato) has dropped below threshold. Scheduled irrigation recommended before 10:00 AM tomorrow.
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick AI Summary Card -->
+            <div class="card quick-ai-card">
+              <div class="card-header">
+                <h3><i class="fa-solid fa-wand-magic-sparkles"></i> FarmAssist Recommendations</h3>
+              </div>
+              <div class="ai-recommendations-list">
+                <div class="rec-item urgent">
+                  <div class="rec-icon"><i class="fa-solid fa-droplet"></i></div>
+                  <div class="rec-details">
+                    <div class="rec-title">Irrigate Field B (Tomato)</div>
+                    <div class="rec-desc">Moisture at 28%. Recommended: 15 mins drip irrigation.</div>
+                  </div>
+                </div>
+                <div class="rec-item info">
+                  <div class="rec-icon"><i class="fa-solid fa-flask-wheat"></i></div>
+                  <div class="rec-details">
+                    <div class="rec-title">Apply Potash to Field A</div>
+                    <div class="rec-desc">Soil report indicates potassium deficiency in Corn zone.</div>
+                  </div>
+                </div>
+                <div class="rec-item warning">
+                  <div class="rec-icon"><i class="fa-solid fa-bug"></i></div>
+                  <div class="rec-details">
+                    <div class="rec-title">Pest Risk Alert: High</div>
+                    <div class="rec-desc">Weather pattern increases Rust fungus risk in Wheat.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Satellite Field NDVI Status Card -->
+            <div class="card map-preview-card">
+              <div class="card-header">
+                <h3><i class="fa-solid fa-satellite-dish"></i> NDVI Health Map Preview</h3>
+                <button class="card-header-btn" onclick="switchTab('satellite-ndvi')">View Full Map <i class="fa-solid fa-arrow-right"></i></button>
+              </div>
+              <div class="ndvi-mini-container">
+                <div class="mini-grid-container">
+                  <div class="mini-grid-field optimal">A1</div>
+                  <div class="mini-grid-field optimal">A2</div>
+                  <div class="mini-grid-field warning">B1</div>
+                  <div class="mini-grid-field danger">B2</div>
+                </div>
+                <div class="ndvi-mini-legend">
+                  <div class="legend-item"><span class="legend-dot green"></span> Healthy (NDVI 0.7 - 1.0)</div>
+                  <div class="legend-item"><span class="legend-dot yellow"></span> Stressed (NDVI 0.4 - 0.6)</div>
+                  <div class="legend-item"><span class="legend-dot red"></span> Action Required (NDVI &lt; 0.4)</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Soil NPK Level Dashboard Chart -->
+            <div class="card npk-chart-card colspan-2">
+              <div class="card-header">
+                <h3><i class="fa-solid fa-chart-bar"></i> Soil Nutrient Status (NPK Levels)</h3>
+                <span class="card-subtitle">Aggregated Sensor Data</span>
+              </div>
+              <div class="npk-chart-container">
+                <canvas id="npkChart"></canvas>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ================= TAB: AI DISEASE SCANNER ================= -->
+        <section id="tab-disease-scanner" class="tab-pane">
+          <div class="tab-header-description">
+            <h2>AI Crop Disease Scanner</h2>
+            <p>Upload a leaf photograph or select one of our pre-captured field samples to detect diseases early and receive biological and chemical treatments.</p>
+          </div>
+          
+          <div class="scanner-layout">
+            <!-- Leaf Scan Input Panel -->
+            <div class="card scanner-input-card">
+              <div class="card-header">
+                <h3><i class="fa-solid fa-camera-retro"></i> Image Capture & Selection</h3>
+              </div>
+              <div class="scanner-upload-area" id="drop-zone">
+                <input type="file" id="file-input" accept="image/*" class="file-hidden">
+                <div class="upload-placeholder" id="upload-placeholder-content">
+                  <i class="fa-solid fa-cloud-arrow-up upload-icon animate-bounce-slow"></i>
+                  <h4>Drag and drop crop leaf image</h4>
+                  <p>Or click to browse from device (JPG, PNG)</p>
+                </div>
+                <!-- Leaf Preview Container -->
+                <div class="leaf-preview-container hidden" id="preview-container">
+                  <img src="" alt="Selected leaf" id="leaf-preview-img">
+                  <div class="scanner-laser hidden" id="scan-laser-line"></div>
+                  <div class="scanning-overlay hidden" id="scanning-overlay-msg">
+                    <span class="spinner-custom"></span>
+                    <span class="scan-label-text">Running AI Diagnostics...</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sample-selection-area">
+                <h4>Or Run Diagnostics on Pre-captured Samples:</h4>
+                <div class="samples-grid">
+                  <div class="sample-card" onclick="selectSample('tomato')">
+                    <img src="assets/tomato_blight.png" alt="Tomato Blight Sample">
+                    <div class="sample-info">
+                      <span class="sample-crop">Tomato</span>
+                      <span class="sample-status">Suspected Spotting</span>
+                    </div>
+                  </div>
+                  <div class="sample-card" onclick="selectSample('corn')">
+                    <img src="assets/corn_rust.png" alt="Corn Rust Sample">
+                    <div class="sample-info">
+                      <span class="sample-crop">Corn</span>
+                      <span class="sample-status">Discolored Spots</span>
+                    </div>
+                  </div>
+                  <div class="sample-card" onclick="selectSample('wheat')">
+                    <img src="assets/healthy_wheat.png" alt="Wheat Healthy Sample">
+                    <div class="sample-info">
+                      <span class="sample-crop">Wheat</span>
+                      <span class="sample-status">Normal Growth</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="scan-action-bar">
+                <button class="btn btn-secondary" id="clear-scan-btn" disabled><i class="fa-solid fa-rotate-left"></i> Reset Scanner</button>
+                <button class="btn btn-primary" id="start-scan-btn" disabled><i class="fa-solid fa-bolt"></i> Diagnose Image</button>
+              </div>
+            </div>
+
+            <!-- Diagnostics Report Panel -->
+            <div class="card scanner-result-card">
+              <div class="card-header">
+                <h3><i class="fa-solid fa-file-medical"></i> Diagnostic Report</h3>
+                <span class="diagnostic-badge idle" id="result-status-badge">Awaiting Input</span>
+              </div>
+              
+              <!-- Idle placeholder -->
+              <div class="result-idle-state" id="result-idle-state">
+                <i class="fa-solid fa-laptop-medical diagnostics-idle-icon"></i>
+                <h4>Ready to Analyze</h4>
+                <p>Provide a leaf photo to generate an instant diagnosis detailing symptoms, organic remedies, and pesticide recommendations.</p>
+              </div>
+              
+              <!-- Report Details (initially hidden) -->
+              <div class="result-report-content hidden" id="result-report-content">
+                <div class="report-header">
+                  <div class="disease-title-area">
+                    <h2 id="report-disease-name">Tomato Early Blight</h2>
+                    <span class="crop-tag" id="report-crop-type">Tomato</span>
+                  </div>
+                  <div class="severity-container">
+                    <span class="severity-lbl">Severity Risk</span>
+                    <div class="severity-bar-bg">
+                      <div class="severity-bar-fill" id="report-severity-fill" style="width: 75%"></div>
+                    </div>
+                    <span class="severity-value" id="report-severity-val">High (75%)</span>
+                  </div>
+                </div>
+
+                <div class="report-stats">
+                  <div class="r-stat">
+                    <span class="r-stat-label">AI Confidence</span>
+                    <span class="r-stat-val text-cyan" id="report-confidence">94.8%</span>
+                  </div>
+                  <div class="r-stat">
+                    <span class="r-stat-label">Pathogen</span>
+                    <span class="r-stat-val" id="report-pathogen">Alternaria solani (Fungus)</span>
+                  </div>
+                </div>
+
+                <div class="report-section">
+                  <h4><i class="fa-solid fa-magnifying-glass-chart"></i> Identified Symptoms</h4>
+                  <p id="report-symptoms">Dark, concentric spots resembling targets on older foliage. Leaves yellow around the margins and drop prematurely.</p>
+                </div>
+
+                <div class="report-section">
+                  <h4><i class="fa-solid fa-seedling"></i> Organic Remedies</h4>
+                  <ul class="remedies-list" id="report-organic-remedies">
+                    <li>Apply copper-based organic fungicides every 7–10 days.</li>
+                    <li>Prune lower branches of tomato plants to prevent soil-splash pathogens.</li>
+                    <li>Mulch around plants to create a barrier between soil spores and leaves.</li>
+                  </ul>
+                </div>
+
+                <div class="report-section border-top">
+                  <h4><i class="fa-solid fa-spray-can-sparkles"></i> Chemical Solutions</h4>
+                  <ul class="remedies-list chemical" id="report-chemical-remedies">
+                    <li>Chlorothalonil or Mancozeb sprays for intensive treatment.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= TAB: SOIL & WATER OPTIMIZER ================= -->
+        <section id="tab-soil-optimizer" class="tab-pane">
+          <div class="tab-header-description">
+            <h2>Soil Health & Irrigation Optimizer</h2>
+            <p>Input soil test values or sensor readings to generate optimal irrigation schedules and targeted NPK fertilizer recipes for your selected crop.</p>
+          </div>
+
+          <div class="optimizer-grid">
+            <!-- Inputs Panel -->
+            <div class="card input-settings-card">
+              <div class="card-header">
+                <h3><i class="fa-solid fa-sliders"></i> Soil & Weather Inputs</h3>
+              </div>
+              <form class="optimizer-form" id="optimizer-form" onsubmit="event.preventDefault();">
+                <div class="form-group">
+                  <label for="opt-crop"><i class="fa-solid fa-seedling"></i> Target Crop</label>
+                  <select id="opt-crop" class="form-control">
+                    <option value="tomato">Tomato (Solanum lycopersicum)</option>
+                    <option value="wheat">Wheat (Triticum aestivum)</option>
+                    <option value="corn">Corn / Maize (Zea mays)</option>
+                    <option value="potato">Potato (Solanum tuberosum)</option>
+                    <option value="rice">Rice (Oryza sativa)</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <div class="label-with-val">
+                    <label for="opt-moisture"><i class="fa-solid fa-droplet"></i> Soil Moisture (%)</label>
+                    <span class="slider-bubble" id="val-moisture">35%</span>
+                  </div>
+                  <input type="range" id="opt-moisture" min="0" max="100" value="35" class="slider-input">
+                </div>
+
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <div class="label-with-val">
+                      <label for="opt-ph"><i class="fa-solid fa-flask"></i> Soil pH</label>
+                      <span class="slider-bubble" id="val-ph">6.5</span>
+                    </div>
+                    <input type="range" id="opt-ph" min="4.0" max="9.0" step="0.1" value="6.5" class="slider-input">
+                  </div>
+                  <div class="form-group">
+                    <label for="opt-weather"><i class="fa-solid fa-cloud-sun"></i> 3-Day Forecast</label>
+                    <select id="opt-weather" class="form-control">
+                      <option value="sunny">Dry & Sunny (No Rain)</option>
+                      <option value="cloudy">Overcast / Cloudy</option>
+                      <option value="rainy">Heavy Rainfall Expected</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="divider-text">Nutrient Content (mg/kg)</div>
+
+                <div class="form-row-3">
+                  <div class="form-group">
+                    <div class="label-with-val">
+                      <label for="opt-n">Nitrogen (N)</label>
+                      <span class="slider-bubble" id="val-n">42</span>
+                    </div>
+                    <input type="range" id="opt-n" min="0" max="150" value="42" class="slider-input">
+                  </div>
+                  <div class="form-group">
+                    <div class="label-with-val">
+                      <label for="opt-p">Phosphorus (P)</label>
+                      <span class="slider-bubble" id="val-p">18</span>
+                    </div>
+                    <input type="range" id="opt-p" min="0" max="100" value="18" class="slider-input">
+                  </div>
+                  <div class="form-group">
+                    <div class="label-with-val">
+                      <label for="opt-k">Potassium (K)</label>
+                      <span class="slider-bubble" id="val-k">110</span>
+                    </div>
+                    <input type="range" id="opt-k" min="0" max="300" value="110" class="slider-input">
+                  </div>
+                </div>
+
+                <button class="btn btn-primary btn-full-width" type="button" onclick="calculateSoilRecommendations()">
+                  <i class="fa-solid fa-gears"></i> Calculate Irrigation & Fertilizers
+                </button>
+              </form>
+            </div>
+
+            <!-- Optimizer Output recommendations -->
+            <div class="card recommendations-result-card">
+              <div class="card-header">
+                <h3><i class="fa-solid fa-prescription-bottle-medical"></i> Fertilizer & Water Prescription</h3>
+                <span class="status-badge-live" id="opt-result-status"><i class="fa-solid fa-circle-check"></i> Standard Mode</span>
+              </div>
+              <div class="prescription-wrapper" id="prescription-wrapper">
+                
+                <!-- Irrigation block -->
+                <div class="presc-card border-left-blue">
+                  <div class="presc-head">
+                    <div class="presc-title-group">
+                      <i class="fa-solid fa-shower presc-main-icon text-blue"></i>
+                      <div>
+                        <h4>Water Management Recommendation</h4>
+                        <span class="sub-label">Derived from Moisture, Soil Type & Rain Forecast</span>
+                      </div>
+                    </div>
+                    <span class="action-alert-badge warning" id="irr-badge">Schedule Water</span>
+                  </div>
+                  <div class="presc-body">
+                    <p class="presc-text" id="irr-text">Soil moisture (35%) is critically low for Tomato plants during early growth. Since no rainfall is forecast, apply <strong>12 liters per square meter</strong> of water within 12 hours.</p>
+                    <div class="presc-metric-row">
+                      <div class="presc-metric">
+                        <span class="pm-lbl">Irrigation Volume</span>
+                        <span class="pm-val text-blue" id="irr-vol">12L/m²</span>
+                      </div>
+                      <div class="presc-metric">
+                        <span class="pm-lbl">Suggested Schedule</span>
+                        <span class="pm-val" id="irr-time">Morning (6 AM - 8 AM)</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Fertilizer Block -->
+                <div class="presc-card border-left-green">
+                  <div class="presc-head">
+                    <div class="presc-title-group">
+                      <i class="fa-solid fa-vial-wheat presc-main-icon text-green"></i>
+                      <div>
+                        <h4>Nutrient Adjustments & Fertilizer Recipe</h4>
+                        <span class="sub-label">Based on NPK deficits vs target crop standards</span>
+                      </div>
+                    </div>
+                    <span class="action-alert-badge info" id="fert-badge">NPK Deficiency</span>
+                  </div>
+                  <div class="presc-body">
+                    <p class="presc-text" id="fert-text">Your soil has a <strong>Nitrogen</strong> deficiency and a mild <strong>Phosphorus</strong> shortfall. Apply a custom blend of Urea and Triple Superphosphate.</p>
+                    <div class="fertilizer-formula-box">
+                      <div class="formula-title">Target Fertilizer Blending Ratio (NPK)</div>
+                      <div class="formula-ratio-display" id="fert-ratio">20 - 10 - 5</div>
+                      <p class="formula-note" id="fert-recipe">Apply 120 kg/hectare of Nitrogen-rich NPK compound fertilizer or 60 kg Urea equivalent.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Soil pH Block -->
+                <div class="presc-card border-left-yellow">
+                  <div class="presc-head">
+                    <div class="presc-title-group">
+                      <i class="fa-solid fa-arrows-spin presc-main-icon text-yellow"></i>
+                      <div>
+                        <h4>pH Correction & Soil Health advice</h4>
+                        <span class="sub-label">Stabilizing nutrient availability thresholds</span>
+                      </div>
+                    </div>
+                    <span class="action-alert-badge" id="ph-badge">pH is Stable</span>
+                  </div>
+                  <div class="presc-body">
+                    <p class="presc-text" id="ph-text">A soil pH of 6.5 is optimal for Tomato crops. No calcium carbonate (lime) or sulfur treatments required. Nutrients remain highly bioavailable.</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= TAB: HARVEST TIMELINE ================= -->
+        <section id="tab-harvest-predictor" class="tab-pane">
+          <div class="tab-header-description">
+            <h2>Interactive Harvest Predictor & Stage Timeline</h2>
+            <p>Set your crop planting date and climate models to forecast maximum yield windows, growth stage transitions, and custom weekly agronomy schedules.</p>
+          </div>
+
+          <div class="timeline-container">
+            <div class="card timeline-inputs-card">
+              <div class="card-header">
+                <h3><i class="fa-solid fa-calendar-days"></i> Prediction Controls</h3>
+              </div>
+              <div class="timeline-form-grid">
+                <div class="form-group">
+                  <label for="time-crop">Select Crop</label>
+                  <select id="time-crop" class="form-control" onchange="updateHarvestTimeline()">
+                    <option value="tomato">Tomato</option>
+                    <option value="wheat">Wheat</option>
+                    <option value="corn">Corn / Maize</option>
+                    <option value="potato">Potato</option>
+                    <option value="rice">Rice</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="time-planting-date">Planting Date</label>
+                  <input type="date" id="time-planting-date" class="form-control" value="2026-05-15" onchange="updateHarvestTimeline()">
+                </div>
+                <div class="form-group">
+                  <label for="time-temp-mod">Climate Temp Offset</label>
+                  <select id="time-temp-mod" class="form-control" onchange="updateHarvestTimeline()">
+                    <option value="normal">Normal Seasonal Averages</option>
+                    <option value="hot">Above Average (+2°C - Accelerated)</option>
+                    <option value="cold">Below Average (-2°C - Delayed)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="yield-forecast-display">
+                <div class="yf-box">
+                  <span class="yf-lbl">Estimated Harvest Window</span>
+                  <span class="yf-val text-green" id="yf-window">August 25 - September 5, 2026</span>
+                </div>
+                <div class="yf-box">
+                  <span class="yf-lbl">Projected Yield Forecast</span>
+                  <span class="yf-val text-cyan" id="yf-yield">64.5 Tons/Hectare <span class="yield-trend-up"><i class="fa-solid fa-arrow-trend-up"></i> +4%</span></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card timeline-visual-card">
+              <div class="card-header">
+                <h3><i class="fa-solid fa-timeline"></i> Crop Development Timeline</h3>
+                <span class="current-days-label" id="days-since-planting">Currently: Day 50 (Vegetative Stage)</span>
+              </div>
+              
+              <div class="crop-timeline-flow">
+                <!-- Timeline stages rendered by javascript -->
+                <div class="timeline-stages-wrapper" id="stages-wrapper">
+                  <!-- JS Dynamic Content -->
+                </div>
+              </div>
+
+              <!-- Growth Stage Summary Box -->
+              <div class="growth-details-card" id="stage-details-box">
+                <h4 id="stage-title">Stage 2: Vegetative Stage (Days 20 - 55)</h4>
+                <p id="stage-desc">Rapid canopy development and root expansion. Nutrient uptake (especially Nitrogen) peaks during this phase.</p>
+                <div class="stage-todos">
+                  <h5>Weekly Tasks for this Stage:</h5>
+                  <ul class="todo-list" id="stage-todos-list">
+                    <li><i class="fa-regular fa-square-check text-green"></i> Ensure nitrogen fertilizer is applied.</li>
+                    <li><i class="fa-regular fa-square"></i> Keep moisture levels steady at 40-50%.</li>
+                    <li><i class="fa-regular fa-square"></i> Inspect lower canopy leaves for blight spots.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= TAB: NDVI SATELLITE MAP ================= -->
+        <section id="tab-satellite-ndvi" class="tab-pane">
+          <div class="tab-header-description">
+            <h2>NDVI Satellite Crop Health Analytics</h2>
+            <p>Analyze spectral vegetation reflectance index (NDVI) across your field grids. Select any zone to retrieve specific diagnostics, coordinates, and recommendations.</p>
+          </div>
+
+          <div class="satellite-map-layout">
+            <!-- Satellite Interactive Map Grid -->
+            <div class="card satellite-viewer-card">
+              <div class="card-header">
+                <h3><i class="fa-solid fa-map-location-dot"></i> Interactive Spectral Reflectance grid</h3>
+                <div class="spectral-filters">
+                  <button class="btn btn-filter active" id="btn-ndvi-view"><i class="fa-solid fa-satellite"></i> NDVI Spectral</button>
+                  <button class="btn btn-filter" id="btn-rgb-view"><i class="fa-solid fa-camera"></i> True Color (RGB)</button>
+                </div>
+              </div>
+              <div class="map-view-canvas-wrapper">
+                <div class="map-grid-container" id="satellite-map-grid">
+                  <!-- Generated by javascript representing fields -->
+                </div>
+              </div>
+              <div class="map-bar-legend">
+                <span>0.0 (Soil/Dead)</span>
+                <div class="gradient-legend-bar"></div>
+                <span>1.0 (Dense Foliage)</span>
+              </div>
+            </div>
+
+            <!-- Field Analysis Panel -->
+            <div class="card field-analysis-card">
+              <div class="card-header">
+                <h3><i class="fa-solid fa-chart-column"></i> Field Segment Analysis</h3>
+                <span class="active-field-badge" id="active-field-name">Field Zone: A-1</span>
+              </div>
+              
+              <div class="field-analysis-details">
+                <div class="field-metric-grid">
+                  <div class="f-metric">
+                    <span class="fm-lbl">Crop Type</span>
+                    <span class="fm-val text-green" id="field-crop">Tomato</span>
+                  </div>
+                  <div class="f-metric">
+                    <span class="fm-lbl">Mean NDVI Value</span>
+                    <span class="fm-val text-cyan" id="field-ndvi">0.82</span>
+                  </div>
+                  <div class="f-metric">
+                    <span class="fm-lbl">Size</span>
+                    <span class="fm-val" id="field-size">4.2 Hectares</span>
+                  </div>
+                  <div class="f-metric">
+                    <span class="fm-lbl">Soil Temp</span>
+                    <span class="fm-val" id="field-temp">24.5 °C</span>
+                  </div>
+                </div>
+
+                <div class="field-chart-wrapper">
+                  <h4><i class="fa-solid fa-chart-area"></i> Historic NDVI Trend (Last 4 Weeks)</h4>
+                  <div class="trend-canvas-container">
+                    <canvas id="ndviTrendChart"></canvas>
+                  </div>
+                </div>
+
+                <div class="field-recs-section">
+                  <h4><i class="fa-solid fa-circle-exclamation text-yellow"></i> Recommended Field Actions</h4>
+                  <ul class="field-recs-list" id="field-recs-list">
+                    <li><i class="fa-solid fa-chevron-right text-green"></i> Vegetation canopy shows optimal growth.</li>
+                    <li><i class="fa-solid fa-chevron-right text-green"></i> No immediate pesticide treatments needed.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- ================= FLOATING AI AGRO-BOT CHAT ================= -->
+  <div class="chatbot-floating-container">
+    <button class="chatbot-trigger" id="chatbot-trigger-btn">
+      <i class="fa-solid fa-comment-dots trigger-icon"></i>
+      <span class="pulse-ring"></span>
+    </button>
+
+    <div class="chatbot-window hidden" id="chatbot-window">
+      <div class="chat-header">
+        <div class="chat-header-info">
+          <div class="chat-avatar"><i class="fa-solid fa-robot"></i></div>
+          <div>
+            <h4>FarmAssist AI</h4>
+            <span class="chat-status">Agronomy Expert System</span>
+          </div>
+        </div>
+        <button class="chat-close-btn" id="chatbot-close-btn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div class="chat-messages-container" id="chat-messages">
+        <div class="chat-msg bot">
+          <div class="chat-msg-bubble">
+            Hello! I am your FarmAssist AI Agronomy Companion. Ask me questions about irrigation schedules, plant diseases, fertilizer applications, or weather threats.
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick prompts -->
+      <div class="chat-quick-prompts">
+        <button class="chip" onclick="sendQuickPrompt('How do I treat Tomato Late Blight?')">Treat Late Blight</button>
+        <button class="chip" onclick="sendQuickPrompt('What is the ideal pH for Wheat?')">Wheat Ideal pH</button>
+        <button class="chip" onclick="sendQuickPrompt('When should I harvest corn?')">Corn Harvest Window</button>
+      </div>
+
+      <div class="chat-input-area">
+        <input type="text" id="chat-user-input" placeholder="Ask FarmAssist AI..." onkeydown="if(event.key === 'Enter') sendChatMessage()">
+        <button class="chat-send-btn" onclick="sendChatMessage()"><i class="fa-solid fa-paper-plane"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
