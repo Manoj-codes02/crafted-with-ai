@@ -1,56 +1,48 @@
-# Welcome to your Expo app 👋
+# Space Escape Runner 🚀🌌
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+An exciting, responsive, retro-themed Space Escape game built with **Expo**, **React Native**, and **React Native Reanimated**. Dodge incoming asteroids, rack up points, and survive as long as you can in this outer-space runner!
 
-## Get started
+## 🎮 Gameplay Preview
 
-1. Install dependencies
+| Active Gameplay | Game Over Screen |
+| :---: | :---: |
+| ![Active Gameplay](assets/images/gameplay.png) | ![Game Over](assets/images/gameover.png) |
 
-   ```bash
-   npm install
-   ```
+## 🌟 Features
+* **Dynamic Physics & Game Loop**: Smooth animation loop using high-frequency timer cycles.
+* **Responsive Layout**: Adapts cleanly to both Mobile (native dimensions) and Web platforms.
+* **Dual Control Schemes**:
+  * **Mobile**: Interactive touch button controls at the bottom of the screen.
+  * **Web**: Native keyboard support using `ArrowLeft`/`ArrowRight` or `A`/`D` keys.
+* **Starfield Background Effect**: Parallax space field animation with randomized stars.
+* **Premium Theme Shell**: Native tab bar routing system with custom dark mode colors.
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## 🚀 Get Started
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
+### 1. Install dependencies
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2. Run the Development Server
+```bash
+npx expo start
+```
+Select `w` to open in your browser, or scan the QR code to run on your Android/iOS device via Expo Go or a Development Build.
 
-### Other setup steps
+### 3. Production Build (Web Static Export)
+To compile a fully optimized production build for the Web:
+```bash
+npx expo export --platform web
+```
+The static bundle will be exported to the `dist/` directory.
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+---
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 🛠️ Tech Stack & Structure
+* **Framework**: [Expo v57](https://docs.expo.dev/) & [React Native](https://reactnative.dev/)
+* **Routing**: [Expo Router v4](https://docs.expo.dev/router/introduction/)
+* **Linting**: ESLint (strictly verified, 0 errors/warnings)
+* **Language**: TypeScript (fully typed)
