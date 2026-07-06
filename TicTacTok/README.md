@@ -8,20 +8,11 @@ A modern, visually stunning, and highly responsive **Tic Tac Toe** game built us
 
 Here is a preview of the application in action:
 
-<div align="center">
-  <table style="border-collapse: collapse; border: none;">
-    <tr style="border: none;">
-      <td style="padding: 10px; border: none; text-align: center;">
-        <p><strong>Start Screen</strong></p>
-        <img src="assets/images/start_screen.png" width="380" alt="Tic Tac Toe Start Screen" style="border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);" />
-      </td>
-      <td style="padding: 10px; border: none; text-align: center;">
-        <p><strong>Gameplay & Winner</strong></p>
-        <img src="assets/images/gameplay_screen.png" width="380" alt="Tic Tac Toe Winner Screen" style="border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);" />
-      </td>
-    </tr>
-  </table>
-</div>
+<p align="center">
+  <img src="assets/images/start_screen.png" width="380" alt="Start Screen" style="border-radius: 8px;" />
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="assets/images/gameplay_screen.png" width="380" alt="Gameplay Screen" style="border-radius: 8px;" />
+</p>
 
 ---
 
