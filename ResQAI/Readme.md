@@ -1,7 +1,10 @@
 # ResQAI ⚕️
 ### AI-Powered Emergency Triage & Disaster Response Assistant
 
+![ResQAI Landing Page](landing_preview.png)
+
 ResQAI is a production-grade, clinical decision-support and emergency triage platform designed to assist patients and first-responders during critical scenarios. Powered by Google Gemini AI, ResQAI analyzes symptoms, visually evaluates injury wounds, calculates clinical risk levels, coordinates localized disaster advice, maps nearby hospitals, and packages patient metrics into downloadable PDF summaries with embedded scan-ready QR codes.
+
 
 ---
 
