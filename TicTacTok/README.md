@@ -1,4 +1,4 @@
-# Tic Tac Toe (Expo & React Native Mobile App)
+# Tic Tac Toe (Mobile App)
 
 A modern, visually stunning, and highly responsive **Tic Tac Toe** game built using **React Native**, **TypeScript**, and **Expo**. This app features a premium dark theme with sleek gradients, glassmorphic UI elements, satisfying micro-animations, and persistent statistics tracking.
 
