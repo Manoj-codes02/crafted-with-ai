@@ -1,14 +1,14 @@
-# Space Escape Runner 🚀🌌
+# Space Escape Runner 
 
 An exciting, responsive, retro-themed Space Escape game built with **Expo**, **React Native**, and **React Native Reanimated**. Dodge incoming asteroids, rack up points, and survive as long as you can in this outer-space runner!
 
-## 🎮 Gameplay Preview
+## Gameplay Preview
 
 | Active Gameplay | Game Over Screen |
 | :---: | :---: |
 | ![Active Gameplay](assets/images/gameplay.png) | ![Game Over](assets/images/gameover.png) |
 
-## 🌟 Features
+## Features
 * **Dynamic Physics & Game Loop**: Smooth animation loop using high-frequency timer cycles.
 * **Responsive Layout**: Adapts cleanly to both Mobile (native dimensions) and Web platforms.
 * **Dual Control Schemes**:
@@ -19,7 +19,7 @@ An exciting, responsive, retro-themed Space Escape game built with **Expo**, **R
 
 ---
 
-## 🚀 Get Started
+##  Get Started
 
 ### 1. Install dependencies
 ```bash
@@ -41,7 +41,7 @@ The static bundle will be exported to the `dist/` directory.
 
 ---
 
-## 🛠️ Tech Stack & Structure
+##  Tech Stack & Structure
 * **Framework**: [Expo v57](https://docs.expo.dev/) & [React Native](https://reactnative.dev/)
 * **Routing**: [Expo Router v4](https://docs.expo.dev/router/introduction/)
 * **Linting**: ESLint (strictly verified, 0 errors/warnings)
