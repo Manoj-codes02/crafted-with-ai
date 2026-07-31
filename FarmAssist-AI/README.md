@@ -13,7 +13,7 @@ FarmAssist AI is a premium, high-fidelity agronomy dashboard and intelligent agr
 
 ---
 
-## 🎨 Theme & Aesthetic System
+## Theme & Aesthetic System
 
 The user interface utilizes a **Dark Forest Glassmorphic** theme:
 * **Background**: Obsidian carbon-dark green (`#060a07`) with custom radial ambient glows (`rgba(16, 185, 129, 0.25)` and `rgba(6, 182, 212, 0.25)`).
@@ -23,7 +23,7 @@ The user interface utilizes a **Dark Forest Glassmorphic** theme:
 
 ---
 
-## 🏗️ Architecture & Component Layout
+## Architecture & Component Layout
 
 ```mermaid
 graph TD
@@ -72,7 +72,7 @@ graph TD
 
 ---
 
-## 🚀 How to Run the App
+##  How to Run the App
 
 1. Ensure [Node.js](https://nodejs.org/) is installed on your computer.
 2. Navigate to the project folder (`d:\New folder (2)`) in your terminal.
