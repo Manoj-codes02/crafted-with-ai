@@ -8,7 +8,7 @@ ResQAI is a production-grade, clinical decision-support and emergency triage pla
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
 *   **AI Symptom Triage**: Enter or dictate symptoms to receive real-time, structured emergency severity risk levels (Low, Moderate, Critical), priority triage levels, clinical reasoning, and warning signs.
 *   **Voice Dictation Input**: Integrates HTML5 Web Speech Recognition API for hands-free symptom descriptions.
@@ -21,7 +21,7 @@ ResQAI is a production-grade, clinical decision-support and emergency triage pla
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 ### Frontend
 *   **React 19 / Vite / TypeScript**
@@ -39,7 +39,7 @@ ResQAI is a production-grade, clinical decision-support and emergency triage pla
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 ├── client/                     # React 19 Frontend Web Application
@@ -65,7 +65,7 @@ ResQAI is a production-grade, clinical decision-support and emergency triage pla
 
 ---
 
-## ⚙️ Setup & Installation
+## Setup & Installation
 
 ### Prerequisite
 *   Node.js (v18+)
@@ -111,7 +111,7 @@ ResQAI is a production-grade, clinical decision-support and emergency triage pla
 
 ---
 
-## 🔬 Local Demonstration Guidelines
+## Local Demonstration Guidelines
 
 1.  **Register a profile**: Open `http://localhost:5173`, click **Sign Up**, and complete details.
 2.  **Add Emergency Contacts**: Navigate to **Medical Profile**, specify your blood group, list allergies, and add 2-3 contacts checking the **SOS Alert** box.
