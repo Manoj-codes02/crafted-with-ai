@@ -4,7 +4,7 @@ A modern, visually stunning, and highly responsive **Tic Tac Toe** game built us
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 Here is a preview of the application in action:
 
@@ -16,7 +16,7 @@ Here is a preview of the application in action:
 
 ---
 
-## ✨ Features
+## Features
 
 - **Rich Premium Aesthetics**: Features a vibrant deep indigo, violet, and magenta gradient background with a modern, glassmorphic visual system.
 - **Micro-Animations & Visual Feedback**:
@@ -29,7 +29,7 @@ Here is a preview of the application in action:
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Framework**: [Expo SDK 57](https://expo.dev) & React Native (0.86)
 - **Language**: TypeScript
@@ -40,7 +40,7 @@ Here is a preview of the application in action:
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 Follow these steps to get a local copy of the project up and running:
 
@@ -77,6 +77,6 @@ Once the server is running, you can:
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
