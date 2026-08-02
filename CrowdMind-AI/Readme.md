@@ -2,7 +2,7 @@
 
 **Disaster Intelligence & Emergency Response Platform**
 
-![CrowdMind AI Platform](frontend\src\assets\screenshot.png)
+![CrowdMind AI Platform](frontend/src/assets/screenshot.png)
 
 CrowdMind AI aggregates chaotic disaster reports from public feeds, social media streams, and SMS reports. It utilizes advanced artificial intelligence and Operations Research to filter duplicates, prioritize incidents, and recommend optimized resource routing for command centers and rescue teams.
 
