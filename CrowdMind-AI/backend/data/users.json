@@ -1,0 +1,42 @@
+[
+  {
+    "_id": "usr-admin",
+    "email": "admin@crowdmind.ai",
+    "password": "$2b$10$PR4CGsfwEccWUZkWXbVXXeU.jlhLdKRhVa5BzP11LTueSEP2Ys9Wa",
+    "name": "Director Rajesh Kumar",
+    "role": "Admin",
+    "agency": "National Disaster Response Force (NDRF)",
+    "createdAt": "2026-07-26T11:39:02.657Z",
+    "updatedAt": "2026-07-26T11:39:02.657Z"
+  },
+  {
+    "_id": "usr-rescue",
+    "email": "rescue@crowdmind.ai",
+    "password": "$2b$10$PR4CGsfwEccWUZkWXbVXXeg4FQK8qRARf7v5ifs2a8MAqKn99fzYW",
+    "name": "Commander Sarah Jenkins",
+    "role": "RescueTeam",
+    "agency": "City Fire & Rescue Services",
+    "createdAt": "2026-07-26T11:39:02.657Z",
+    "updatedAt": "2026-07-26T11:39:02.657Z"
+  },
+  {
+    "_id": "usr-volunteer",
+    "email": "volunteer@crowdmind.ai",
+    "password": "$2b$10$PR4CGsfwEccWUZkWXbVXXeXxuAAmIxrqhkFU.aM1yYX2znlE.KEvG",
+    "name": "Amit Patel",
+    "role": "Volunteer",
+    "agency": "Red Cross Volunteers",
+    "createdAt": "2026-07-26T11:39:02.657Z",
+    "updatedAt": "2026-07-26T11:39:02.657Z"
+  },
+  {
+    "_id": "usr-viewer",
+    "email": "viewer@crowdmind.ai",
+    "password": "$2b$10$PR4CGsfwEccWUZkWXbVXXe04rc5Y48zhVPFFzLnTNIJO6KEYn/B7i",
+    "name": "Media Representative",
+    "role": "Viewer",
+    "agency": "Independent Press",
+    "createdAt": "2026-07-26T11:39:02.657Z",
+    "updatedAt": "2026-07-26T11:39:02.657Z"
+  }
+]

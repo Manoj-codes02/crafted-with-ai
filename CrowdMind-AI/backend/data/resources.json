@@ -1,0 +1,96 @@
+[
+  {
+    "_id": "res-amb-01",
+    "type": "Ambulance",
+    "identifier": "AMB-DELHI-01",
+    "status": "Deployed",
+    "currentLatitude": 28.6304,
+    "currentLongitude": 77.2177,
+    "assignedIncidentId": "inc-02",
+    "capacity": 2
+  },
+  {
+    "_id": "res-amb-02",
+    "type": "Ambulance",
+    "identifier": "AMB-DELHI-02",
+    "status": "Deployed",
+    "currentLatitude": 28.6012,
+    "currentLongitude": 77.2201,
+    "assignedIncidentId": "inc-04",
+    "capacity": 2,
+    "updatedAt": "2026-07-26T12:37:14.876Z"
+  },
+  {
+    "_id": "res-amb-03",
+    "type": "Ambulance",
+    "identifier": "AMB-DELHI-03",
+    "status": "Available",
+    "currentLatitude": 28.562,
+    "currentLongitude": 77.195,
+    "assignedIncidentId": null,
+    "capacity": 2
+  },
+  {
+    "_id": "res-boat-01",
+    "type": "Boat",
+    "identifier": "BOAT-YAMUNA-01",
+    "status": "Deployed",
+    "currentLatitude": 28.618,
+    "currentLongitude": 77.251,
+    "assignedIncidentId": "inc-01",
+    "capacity": 8,
+    "updatedAt": "2026-07-26T12:37:14.873Z"
+  },
+  {
+    "_id": "res-boat-02",
+    "type": "Boat",
+    "identifier": "BOAT-YAMUNA-02",
+    "status": "Available",
+    "currentLatitude": 28.632,
+    "currentLongitude": 77.259,
+    "assignedIncidentId": null,
+    "capacity": 8
+  },
+  {
+    "_id": "res-heli-01",
+    "type": "Helicopter",
+    "identifier": "HELI-AIRBASE-01",
+    "status": "Available",
+    "currentLatitude": 28.58,
+    "currentLongitude": 77.12,
+    "assignedIncidentId": null,
+    "capacity": 12
+  },
+  {
+    "_id": "res-med-01",
+    "type": "MedicalKit",
+    "identifier": "MEDKIT-WH-A",
+    "status": "Available",
+    "currentLatitude": 28.552,
+    "currentLongitude": 77.268,
+    "assignedIncidentId": null,
+    "capacity": 50
+  },
+  {
+    "_id": "res-food-01",
+    "type": "FoodPack",
+    "identifier": "FOOD-SHELTER-HUB",
+    "status": "Deployed",
+    "currentLatitude": 28.549,
+    "currentLongitude": 77.251,
+    "assignedIncidentId": "inc-05",
+    "capacity": 250,
+    "updatedAt": "2026-07-26T12:37:14.877Z"
+  },
+  {
+    "_id": "res-vol-01",
+    "type": "Volunteer",
+    "identifier": "VOLUNTEER-GROUP-A",
+    "status": "Deployed",
+    "currentLatitude": 28.61,
+    "currentLongitude": 77.225,
+    "assignedIncidentId": "yu3pbar3x",
+    "capacity": 15,
+    "updatedAt": "2026-07-26T12:37:14.874Z"
+  }
+]

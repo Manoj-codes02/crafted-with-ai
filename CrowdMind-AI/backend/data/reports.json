@@ -1,0 +1,45 @@
+[
+  {
+    "_id": "rep-01",
+    "title": "Yamuna River Overflow Situation Report",
+    "aiSummary": "Continuous heavy monsoon rain has led to an overflow of the Yamuna River bank. Riverside Colony Sector 15 has suffered massive waterlogging with ground floor inundation. Water levels are rising at 2cm/hour. Currently, 30+ houses are affected. Recommendation is to prioritize evacuation via Rescue Boats (BOAT-YAMUNA-01 and BOAT-YAMUNA-02) and establish a medical first-aid hub at the Lajpat Nagar shelter point.",
+    "createdDate": "2026-07-26T08:39:02.665Z",
+    "createdByUserId": "usr-admin",
+    "caseHistory": [
+      {
+        "timestamp": "2026-07-26T08:39:02.665Z",
+        "status": "Pending",
+        "description": "First public reports of waterlogging surfaced via Twitter social streams. AI Engine analyzed and flagged high flood probability (Score 92%).",
+        "updatedBy": "AI Engine Parser"
+      },
+      {
+        "timestamp": "2026-07-26T09:09:02.665Z",
+        "status": "Pending",
+        "description": "Incident verified and logged by Emergency Command Center. Created incident ticket inc-01.",
+        "updatedBy": "Director Rajesh Kumar"
+      },
+      {
+        "timestamp": "2026-07-26T09:39:02.665Z",
+        "status": "Dispatched",
+        "description": "Deployed local volunteer team VOLUNTEER-GROUP-A to assess ground-level bottlenecks and guide elderly residents.",
+        "updatedBy": "Commander Sarah Jenkins"
+      }
+    ]
+  },
+  {
+    "_id": "676t121dg",
+    "createdAt": "2026-07-26T12:38:52.074Z",
+    "updatedAt": "2026-07-26T12:38:52.074Z",
+    "title": "FLOOD: Yamuna River Bank, Sector 15 Briefing File",
+    "aiSummary": "This report details a Flood incident titled \"Severe Flooding in Riverside Colony\" located at Yamuna River Bank, Sector 15. \n  The incident is prioritized as High with required resources identified as: Boats, Volunteers, Food Packs. \n  The incident remains in active coordination.",
+    "caseHistory": [
+      {
+        "timestamp": "2026-07-26T12:38:52.070Z",
+        "status": "Dispatched",
+        "description": "Initial situation file opened from incident alert: \"Severe Flooding in Riverside Colony\". Description: Water has entered the ground floors of over 30 houses. Elderly residents are stranded on rooftops. Immediate evacuation required.",
+        "updatedBy": "System Operations Compiler"
+      }
+    ],
+    "createdDate": "2026-07-26T12:38:52.074Z"
+  }
+]
