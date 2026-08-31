@@ -432,7 +432,7 @@ export default function App() {
     return (
       <LinearGradient colors={['#020617', '#0F172A', '#1E1B4B']} style={styles.flex}>
         <SafeAreaView style={styles.centeredScreen}>
-          <Text style={styles.bigTitle}>TICTACTOK</Text>
+          <Text style={styles.bigTitle}>TIC TAC TOK</Text>
           <Text style={styles.subtitle}>Quick. Smart. Addictive.</Text>
 
           {/* Persistent Progression Summary Card */}
